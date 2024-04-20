@@ -7,25 +7,34 @@ import { isDark, toggleDark } from '../composables'
 <template>
   <NSpace>
     <NLayout>
-      <div class="page">
-        <NButton @click="toggleDark()">
+      <div 
+        flex
+        justify-center 
+        items-cetner
+        w-screen
+        h-screen  
+        gap-3
+        m-3
+      >
+        <NButton @click="toggleDark()" w-10>
           <template #icon>
             <NIcon v-if="isDark" :component="SunnyOutline" />
             <NIcon v-else :component="MoonOutline" />
           </template>
         </NButton>
+        <div 
+          flex 
+          ustify-center 
+          items-center 
+          text-gray 
+          h-fit 
+          w-fit
+          hover="border-hover-g"
+        >
+          <div class="i-logos-naiveui text-3xl" />
+          Naïve UI with UnoCSS
+        </div>
       </div>
     </NLayout>
   </NSpace>
 </template>
-
-<style>
-.page {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  text-align: center;
-}
-</style>
