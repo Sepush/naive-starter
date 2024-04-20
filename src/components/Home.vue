@@ -5,18 +5,18 @@ import { isDark, toggleDark } from '../composables'
 </script>
 
 <template>
-  <n-space>
-    <n-layout>
+  <NSpace>
+    <NLayout>
       <div class="page">
-        <n-button @click="toggleDark()">
+        <NButton @click="toggleDark()">
           <template #icon>
-            <n-icon v-if="isDark" :component="SunnyOutline" />
-            <n-icon v-else :component="MoonOutline" />
+            <NIcon v-if="isDark" :component="SunnyOutline" />
+            <NIcon v-else :component="MoonOutline" />
           </template>
-        </n-button>
+        </NButton>
       </div>
-    </n-layout>
-  </n-space>
+    </NLayout>
+  </NSpace>
 </template>
 
 <style>

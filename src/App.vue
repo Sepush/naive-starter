@@ -6,7 +6,6 @@ import {
   NLoadingBarProvider,
   NMessageProvider,
   NNotificationProvider,
-  NSpace,
   darkTheme,
 } from 'naive-ui'
 import Home from './components/Home.vue'
@@ -16,15 +15,15 @@ const getDarkTheme = computed(() => isDark.value ? darkTheme : undefined)
 </script>
 
 <template>
-  <n-config-provider :theme="getDarkTheme">
-    <n-loading-bar-provider>
-      <n-message-provider>
-        <n-notification-provider>
-          <n-dialog-provider>
+  <NConfigProvider :theme="getDarkTheme">
+    <NLoadingBarProvider>
+      <NMessageProvider>
+        <NNotificationProvider>
+          <NDialogProvider>
             <Home />
-          </n-dialog-provider>
-        </n-notification-provider>
-      </n-message-provider>
-    </n-loading-bar-provider>
-  </n-config-provider>
+          </NDialogProvider>
+        </NNotificationProvider>
+      </NMessageProvider>
+    </NLoadingBarProvider>
+  </NConfigProvider>
 </template>

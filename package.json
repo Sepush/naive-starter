@@ -1,26 +1,27 @@
 {
   "name": "naive-starter",
-  "private": true,
   "version": "0.0.0",
+  "private": true,
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "vue": "^3.2.25"
+    "vue": "^3.4.23"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.18.8",
+    "@antfu/eslint-config": "^2.15.0",
     "@vicons/ionicons5": "^0.12.0",
-    "@vitejs/plugin-vue": "^2.2.0",
-    "@vueuse/core": "^8.0.0",
-    "eslint": "^8.11.0",
-    "naive-ui": "^2.26.4",
-    "typescript": "^4.5.4",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@vueuse/core": "^10.9.0",
+    "eslint": "^9.1.0",
+    "naive-ui": "^2.38.1",
+    "typescript": "^5.4.5",
     "vfonts": "^0.0.3",
-    "vite": "^2.8.0",
-    "vue-tsc": "^0.29.8"
+    "vite": "^5.2.9",
+    "vue-tsc": "^2.0.13"
   }
 }
