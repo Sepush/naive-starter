@@ -15,15 +15,15 @@ const getDarkTheme = computed(() => isDark.value ? darkTheme : undefined);
 </script>
 
 <template>
-  <NConfigProvider :theme="getDarkTheme">
-    <NLoadingBarProvider>
-      <NMessageProvider>
-        <NNotificationProvider>
-          <NDialogProvider>
+  <n-config-provider :theme="getDarkTheme">
+    <n-loading-bar-provider>
+      <n-message-provider>
+        <n-notification-provider>
+          <n-dialog-provider>
             <Home />
-          </NDialogProvider>
-        </NNotificationProvider>
-      </NMessageProvider>
-    </NLoadingBarProvider>
-  </NConfigProvider>
+          </n-dialog-provider>
+        </n-notification-provider>
+      </n-message-provider>
+    </n-loading-bar-provider>
+  </n-config-provider>
 </template>
