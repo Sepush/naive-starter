@@ -4,10 +4,10 @@
   "version": "0.0.0",
   "private": true,
   "packageManager": "pnpm@10.27.0",
-  "overrides": {
-    "vite": "8.0.0-beta.0"
-  },
   "pnpm": {
+    "overrides": {
+      "vite": "8.0.0-beta.5"
+    },
     "allowBuilds": {
       "dprint": true
     }
@@ -21,7 +21,7 @@
     "lint": "oxlint . --type-aware",
     "lint:fix": "oxlint . --fix --type-aware",
     "lint:type": "vue-tsc -b",
-    "test": "vitest",
+    "test": "vitest run",
     "test:run": "vitest run",
     "test:ui": "vitest --ui",
     "test:coverage": "vitest run --coverage",
@@ -60,7 +60,7 @@
     "unocss": "^66.5.12",
     "vitest": "^4.0.16",
     "vfonts": "^0.0.3",
-    "vite": "8.0.0-beta.0",
+    "vite": "8.0.0-beta.5",
     "vue-tsc": "^3.2.1"
   }
 }

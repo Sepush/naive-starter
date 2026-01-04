@@ -5,8 +5,8 @@ import { isDark, toggleDark } from '../composables';
 </script>
 
 <template>
-  <NSpace>
-    <NLayout>
+  <n-space>
+    <n-layout>
       <div
         flex
         justify-center
@@ -16,12 +16,12 @@ import { isDark, toggleDark } from '../composables';
         gap-3
         m-3
       >
-        <NButton @click="toggleDark()" w-10>
+        <n-button @click="toggleDark()" w-10>
           <template #icon>
-            <NIcon v-if="isDark" :component="SunnyOutline" />
-            <NIcon v-else :component="MoonOutline" />
+            <n-icon v-if="isDark" :component="SunnyOutline" />
+            <n-icon v-else :component="MoonOutline" />
           </template>
-        </NButton>
+        </n-button>
         <div
           flex
           ustify-center
@@ -35,6 +35,6 @@ import { isDark, toggleDark } from '../composables';
           Naïve UI with UnoCSS
         </div>
       </div>
-    </NLayout>
-  </NSpace>
+    </n-layout>
+  </n-space>
 </template>
