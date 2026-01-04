@@ -3,8 +3,8 @@
     "antfu.vite",
     "Vue.volar",
     "antfu.iconify",
-    "dbaeumer.vscode-eslint",
-    "voorjaar.windicss-intellisense",
-    "csstools.postcss"
+    "antfu.unocss",
+    "dprint.dprint",
+    "oxc.oxc"
   ]
 }

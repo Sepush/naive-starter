@@ -11,11 +11,11 @@ node_modules
 dist
 dist-ssr
 *.local
+.node-modules-inspector
 
 # lock files
 yarn.lock
 package-lock.json
-pnpm-lock.yaml
 
 # Editor directories and files
 .vscode/*

@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import { NButton, NIcon, NLayout, NSpace } from 'naive-ui'
-import { MoonOutline, SunnyOutline } from '@vicons/ionicons5'
-import { isDark, toggleDark } from '../composables'
+import { MoonOutline, SunnyOutline } from '@vicons/ionicons5';
+import { NButton, NIcon, NLayout, NSpace } from 'naive-ui';
+import { isDark, toggleDark } from '../composables';
 </script>
 
 <template>
   <NSpace>
     <NLayout>
-      <div 
+      <div
         flex
-        justify-center 
+        justify-center
         items-cetner
         w-screen
-        h-screen  
+        h-screen
         gap-3
         m-3
       >
@@ -22,12 +22,12 @@ import { isDark, toggleDark } from '../composables'
             <NIcon v-else :component="MoonOutline" />
           </template>
         </NButton>
-        <div 
-          flex 
-          ustify-center 
-          items-center 
-          text-gray 
-          h-fit 
+        <div
+          flex
+          ustify-center
+          items-center
+          text-gray
+          h-fit
           w-fit
           hover="border-hover-g"
         >
