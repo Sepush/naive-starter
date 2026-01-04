@@ -3,31 +3,64 @@
   "type": "module",
   "version": "0.0.0",
   "private": true,
+  "packageManager": "pnpm@10.27.0",
+  "overrides": {
+    "vite": "8.0.0-beta.0"
+  },
+  "pnpm": {
+    "allowBuilds": {
+      "dprint": true
+    }
+  },
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "pnpm run lint:type && vite build",
     "preview": "vite preview",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "fmt": "dprint fmt",
+    "fmt:check": "dprint check",
+    "lint": "oxlint . --type-aware",
+    "lint:fix": "oxlint . --fix --type-aware",
+    "lint:type": "vue-tsc -b",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,vue,json,md,css,scss,html}": [
+      "dprint fmt"
+    ],
+    "*.{js,jsx,ts,tsx,vue}": [
+      "oxlint --fix --type-aware"
+    ]
   },
   "dependencies": {
-    "vue": "^3.4.23"
+    "vue": "^3.5.26"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.15.0",
-    "@iconify-json/logos": "^1.1.42",
-    "@iconify-json/mdi": "^1.1.66",
-    "@types/web-bluetooth": "^0.0.20",
-    "@unocss/preset-uno": "^0.59.4",
-    "@vicons/ionicons5": "^0.12.0",
-    "@vitejs/plugin-vue": "^5.0.4",
-    "@vueuse/core": "^10.9.0",
-    "eslint": "^9.1.0",
-    "naive-ui": "^2.38.1",
-    "typescript": "^5.4.5",
-    "unocss": "^0.59.4",
+    "@iconify-json/logos": "^1.2.10",
+    "@iconify-json/mdi": "^1.2.3",
+    "@types/node": "^24.10.1",
+    "@unocss/preset-uno": "^66.5.12",
+    "@vicons/ionicons5": "^0.13.0",
+    "@vitejs/plugin-vue": "^6.0.3",
+    "@vue/tsconfig": "^0.8.1",
+    "@vueuse/core": "^14.1.0",
+    "dprint": "^0.51.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "naive-ui": "^2.43.2",
+    "@vitest/coverage-v8": "^4.0.16",
+    "@vue/test-utils": "^2.4.6",
+    "oxlint": "^1.36.0",
+    "oxlint-tsgolint": "^0.10.1",
+    "jsdom": "^27.4.0",
+    "typescript": "^5.9.3",
+    "unocss": "^66.5.12",
+    "vitest": "^4.0.16",
     "vfonts": "^0.0.3",
-    "vite": "^5.2.9",
-    "vue-tsc": "^2.0.13"
+    "vite": "8.0.0-beta.0",
+    "vue-tsc": "^3.2.1"
   }
 }
